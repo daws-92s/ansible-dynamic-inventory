@@ -7,3 +7,13 @@
   - name: print Hi
     debug:
       msg: "Hi"
+
+  - name: install nginx
+    dnf:
+      name: nginx
+      state: present
+
+  - name: start nginx
+    service:
+      state: started
+      name: nginx
